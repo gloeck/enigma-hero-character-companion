@@ -1,44 +1,43 @@
 package character;
 
+import race.Race;
+
 public class PlayerCharacter implements CommonMethods {
 
 	private String characterName;
 	private int hitPoints;
 	private int proficienyBonus;
-	private int strength;
-	private int dexterity;
-	private int constitution;
-	private int intelligence;
-	private int wisdom;
-	private int charisma;
+	//private int experience;
+	//private int /level;
+	//private String alignment;
+	//private int acBonus;
+	//private int attackBonus;
+	//private String personalityTraits;
+	//private String ideals;
+	//private String bonds;
+	//private String flaws;
+
+	@SuppressWarnings("unused")
+	private AbilityScores abilityScores;
+
+	private Race race;
 
 	//
-	
+
 	public PlayerCharacter() {
-		
+
 	}
-	
-	/**
-	 * @param characterName
-	 * @param hitPoints
-	 * @param proficienyBonus
-	 */
+
 	public PlayerCharacter(String characterName, int hitPoints, int proficienyBonus) {
 		this.characterName = characterName;
 		this.hitPoints = hitPoints;
 		this.proficienyBonus = proficienyBonus;
-		GenerateAbilityScores();
-	}
 
-	@Override
-	public void Increase2() {
-		// TODO Auto-generated method stub
+		this.abilityScores = new AbilityScores();
 
-	}
-
-	@Override
-	public void Increase1() {
-		// TODO Auto-generated method stub
+		race = new Race();
+		race.RandomRace();
+		ApplyRaceModifiers(race.getName());
 
 	}
 
@@ -49,31 +48,56 @@ public class PlayerCharacter implements CommonMethods {
 		return (int) (Math.random() * number + 1);
 	}
 
-	private int RandomAbilityScore() {
-		int abilityScore = 0;
-		int lesserValue = 6;
-		int roll = 0;
-		for (int i = 0; i < 4; i++) {
-			roll = Random(6);
-			if (roll < lesserValue) {
-				lesserValue = roll;
-			}
-			abilityScore += roll;
-		}
-		return abilityScore - lesserValue;
-	}
-
-	public void GenerateAbilityScores() {
-		setStrength(RandomAbilityScore());
-		setDexterity(RandomAbilityScore());
-		setConstitution(RandomAbilityScore());
-		setIntelligence(RandomAbilityScore());
-		setWisdom(RandomAbilityScore());
-		setCharisma(RandomAbilityScore());
-	}
-
 	public int CalculateAbilityScoreModifier(int ability) {
 		return (ability - 10) / 2;
+	}
+
+	public int Increase2(int score) {
+		return score = +2;
+	}
+
+	public int Increase1(int score) {
+		return score = +1;
+	}
+
+	public void ApplyRaceModifiers(String name) {
+		switch (name) {
+		case "Dwarf":
+			race.DwarfModifiers(race.getSubrace());
+			break;
+
+		case "Elf":
+			race.ElfModifiers(race.getName());
+			break;
+
+		case "Halfling":
+			race.HalflingModifiers(race.getName());
+			break;
+
+		case "Human":
+			race.HumanModifiers(race.getName());
+			break;
+
+		case "Dragonborne":
+			race.DragonborneModifiers(race.getName());
+			break;
+
+		case "Gnome":
+			race.GnomeModifiers(race.getName());
+			break;
+
+		case "Half-Elf":
+			race.HalfElfModifiersRandom();
+			break;
+
+		case "Half-Orc":
+			race.HalfOrcModifiers();
+			break;
+
+		case "Tiefling":
+			race.TieflingModifiers();
+			break;
+		}
 	}
 
 	public String getCharacterName() {
@@ -100,52 +124,12 @@ public class PlayerCharacter implements CommonMethods {
 		this.proficienyBonus = proficienyBonus;
 	}
 
-	public int getStrength() {
-		return strength;
+	public Race getRace() {
+		return race;
 	}
 
-	public void setStrength(int strength) {
-		this.strength = strength;
-	}
-
-	public int getDexterity() {
-		return dexterity;
-	}
-
-	public void setDexterity(int dexterity) {
-		this.dexterity = dexterity;
-	}
-
-	public int getConstitution() {
-		return constitution;
-	}
-
-	public void setConstitution(int constitution) {
-		this.constitution = constitution;
-	}
-
-	public int getIntelligence() {
-		return intelligence;
-	}
-
-	public void setIntelligence(int intelligence) {
-		this.intelligence = intelligence;
-	}
-
-	public int getWisdom() {
-		return wisdom;
-	}
-
-	public void setWisdom(int wisdom) {
-		this.wisdom = wisdom;
-	}
-
-	public int getCharisma() {
-		return charisma;
-	}
-
-	public void setCharisma(int charisma) {
-		this.charisma = charisma;
+	public void setRace(Race race) {
+		this.race = race;
 	}
 
 }
