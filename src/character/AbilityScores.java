@@ -52,7 +52,7 @@ public class AbilityScores implements CommonMethods {
 		setCharisma(RandomAbilityScore());
 	}
 
-	public int CalculateAbilityScoreModifier(int ability) {
+	public static int CalculateAbilityScoreModifier(int ability) {
 		return (ability - 10) / 2;
 	}
 

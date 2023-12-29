@@ -37,7 +37,7 @@ public class PlayerCharacter implements CommonMethods {
 
 		race = new Race();
 		race.RandomRace();
-		ApplyRaceModifiers(race.getName());
+		race.ApplyRaceModifiers(race.getName());
 
 	}
 
@@ -46,58 +46,6 @@ public class PlayerCharacter implements CommonMethods {
 		// TODO Auto-generated method stub
 
 		return (int) (Math.random() * number + 1);
-	}
-
-	public int CalculateAbilityScoreModifier(int ability) {
-		return (ability - 10) / 2;
-	}
-
-	public int Increase2(int score) {
-		return score = +2;
-	}
-
-	public int Increase1(int score) {
-		return score = +1;
-	}
-
-	public void ApplyRaceModifiers(String name) {
-		switch (name) {
-		case "Dwarf":
-			race.DwarfModifiers(race.getSubrace());
-			break;
-
-		case "Elf":
-			race.ElfModifiers(race.getName());
-			break;
-
-		case "Halfling":
-			race.HalflingModifiers(race.getName());
-			break;
-
-		case "Human":
-			race.HumanModifiers(race.getName());
-			break;
-
-		case "Dragonborne":
-			race.DragonborneModifiers(race.getName());
-			break;
-
-		case "Gnome":
-			race.GnomeModifiers(race.getName());
-			break;
-
-		case "Half-Elf":
-			race.HalfElfModifiersRandom();
-			break;
-
-		case "Half-Orc":
-			race.HalfOrcModifiers();
-			break;
-
-		case "Tiefling":
-			race.TieflingModifiers();
-			break;
-		}
 	}
 
 	public String getCharacterName() {

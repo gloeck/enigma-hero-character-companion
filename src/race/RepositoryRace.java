@@ -2,7 +2,7 @@ package race;
 
 import java.util.ArrayList;
 
-public class RepositoryRace<T, U, V, W, X, Y> {
+public class RepositoryRace {
 
 	private String name;
 	private Double speed;
@@ -15,8 +15,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 
 	}
 
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> Dwarf() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> dwarf = new RepositoryRace<>();
+	private static RepositoryRace Dwarf() {
+		RepositoryRace dwarf = new RepositoryRace();
 
 		dwarf.setName("Dwarf");
 		dwarf.setSpeed(7.5);
@@ -35,8 +35,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return dwarf;
 	}
 
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> Elf() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> elf = new RepositoryRace<>();
+	private static RepositoryRace Elf() {
+		RepositoryRace elf = new RepositoryRace();
 
 		elf.setName("Elf");
 		elf.setSpeed(9.0);
@@ -57,8 +57,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return elf;
 	}
 
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> Halfling() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> halfling = new RepositoryRace<>();
+	private static RepositoryRace Halfling() {
+		RepositoryRace halfling = new RepositoryRace();
 
 		halfling.setName("Halfling");
 		halfling.setSpeed(7.5);
@@ -77,8 +77,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return halfling;
 	}
 
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> Human() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> human = new RepositoryRace<>();
+	private static RepositoryRace Human() {
+		RepositoryRace human = new RepositoryRace();
 
 		human.setName("Human");
 		human.setSpeed(9.0);
@@ -94,8 +94,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return human;
 	}
 
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> Dragonborne() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> dragonborne = new RepositoryRace<>();
+	private static RepositoryRace Dragonborne() {
+		RepositoryRace dragonborne = new RepositoryRace();
 
 		dragonborne.setName("Dragonborne");
 		dragonborne.setSpeed(9.0);
@@ -121,8 +121,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return dragonborne;
 	}
 	
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> Gnome() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> gnome = new RepositoryRace<>();
+	private static RepositoryRace Gnome() {
+		RepositoryRace gnome = new RepositoryRace();
 
 		gnome.setName("Gnome");
 		gnome.setSpeed(7.5);
@@ -140,8 +140,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return gnome;
 	}
 	
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> HalfElf() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> halfElf = new RepositoryRace<>();
+	private static RepositoryRace HalfElf() {
+		RepositoryRace halfElf = new RepositoryRace();
 
 		halfElf.setName("Half-Elf");
 		halfElf.setSpeed(9.0);
@@ -159,8 +159,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return halfElf;
 	}
 	
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> HalfOrc() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> halfOrc = new RepositoryRace<>();
+	private static RepositoryRace HalfOrc() {
+		RepositoryRace halfOrc = new RepositoryRace();
 
 		halfOrc.setName("Half-Orc");
 		halfOrc.setSpeed(9.0);
@@ -179,8 +179,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return halfOrc;
 	}
 	
-	private static RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> Tiefling() {
-		RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>> tiefling = new RepositoryRace<>();
+	private static RepositoryRace Tiefling() {
+		RepositoryRace tiefling = new RepositoryRace();
 
 		tiefling.setName("Tiefling");
 		tiefling.setSpeed(9.0);
@@ -198,8 +198,8 @@ public class RepositoryRace<T, U, V, W, X, Y> {
 		return tiefling;
 	}
 
-	static public ArrayList<RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>>> RaceList() {
-		ArrayList<RepositoryRace<String, Double, String, String, ArrayList<String>, ArrayList<String>>> raceList = new ArrayList<>();
+	static public ArrayList<RepositoryRace> RaceList() {
+		ArrayList<RepositoryRace> raceList = new ArrayList<>();
 
 		raceList.add(Dwarf());
 		raceList.add(Elf());
